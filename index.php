@@ -6,6 +6,6 @@
    if(!$user->count()) {
     echo 'No user';
    } else {
-    echo 'OK!';
+    echo $user->first()->username;
    }     
 ?>
