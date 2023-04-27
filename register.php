@@ -3,8 +3,6 @@ require_once 'core/init.php';
 
 if(Input::exists()) {
     if(Token::check(Input::get('token'))) {
-
-        echo 'i have been run';
         $validate = new Validate();
         $validation  = $validate->check($_POST, array(
             'username' => array(
@@ -44,7 +42,7 @@ if(Input::exists()) {
                 ));
 
                 Session::flash('home', 'You have been registered and can now log in!');
-                header('Location: index.php');
+                Redirect::to('index.php');
             } catch(Exception $e) {
                 die($e->getMessage());
             }
