@@ -12,6 +12,7 @@
 
     <ul>
         <li><a href="logout.php">Log out</a></li>
+        <li><a href="update.php">Update Details</a></li>
     </ul>
 
 <?php 
