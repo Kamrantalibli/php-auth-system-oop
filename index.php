@@ -17,6 +17,11 @@
     </ul>
 
 <?php 
+
+    if($user->hasPermission('admin')) {
+        echo '<p>You are an administrator!</p>';
+    }
+
     } else {
         echo '<p>You need to <a href="login.php">Log in</a> or <a href="register.php">Register</a></p>';
     }
